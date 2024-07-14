@@ -29,7 +29,15 @@ video {
 </head>
 <body>
 <div class="video-container">
-  <video autoplay muted loop>
+  <video
+   class="video-player"
+   width="320"
+   height="240"
+   controls="controls"
+   controls preload="auto"
+   autoplay="autoplay" loop muted playsinline
+  
+  >
     <source src="underconstruction.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
