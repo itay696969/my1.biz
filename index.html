@@ -1,71 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML5 Fullscreen Video Autoplay Background</title>
-    <link rel="stylesheet" href="css/main.css">
-    <script src="js/script.js"></script>
-</head>
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>הצעד הראשון שלך להצלחה ברשת – יחד נבנה את האימפריה הדיגיטלית שלך!</title>
 <style>
-    body {
-     margin: 0;
-     height: 100vh;
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     background-color: #000000;
-    }
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000000;
+}
+
+.video-container {
+  position: relative;
+  width: 80%;
+  max-width: 800px;
+}
+
+video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
 </style>
-
-<body onload="requestFullScreen()">
-
-    
-    <div class="bg-overlay">
-
-        <div class="video-container">
-            <video
-             class="video-player"
-             controls="controls"
-             controls preload="auto"
-             autoplay="autoplay" loop muted playsinline
-            
-            >
-              <source src="underconstruction.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
-          </div>
-
-
-    </div>
-    <!-- 
-    <video class="fullscreen-video" 
-            id="myVideo" 
-            autoplay="autoplay" 
-            muted loop>
-
-        <source src="underconstruction.mp4">
-        Your browser does not support the video tag.
-    </video> -->
-
-    <script>
-        function requestFullScreen() {
-
-            var element = document.getElementById("myVideo");
-
-            // Supports most browsers and their versions.
-            var requestMethod = element.requestFullScreen || element.webkitRequestFullScreen || element.mozRequestFullScreen || element.msRequestFullScreen;
-
-            if (requestMethod) { // Native full screen.
-                requestMethod.call(element);
-            } else if (typeof window.ActiveXObject !== "undefined") { // Older IE.
-                var wscript = new ActiveXObject("WScript.Shell");
-                if (wscript !== null) {
-                    wscript.SendKeys("{F11}");
-                }
-            }
-        }
-    </script>
+</head>
+<body>
+<div class="video-container">
+  <video
+   class="video-player"
+   width="320"
+   height="240"
+   controls="controls"
+   controls preload="auto"
+   autoplay="autoplay" loop muted playsinline
+  
+  >
+    <source src="underconstruction.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</div>
 </body>
 </html>
